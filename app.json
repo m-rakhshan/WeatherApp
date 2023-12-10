@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "WeatherApp",
+    "slug": "WeatherApp",
+    "version": "1.0.6",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0C1228"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "allowsArbitraryLoads": true
+        }
+      },
+      "bundleIdentifier": "com.weather.forecast"
+    },
+    "android": {
+      "package": "com.weather.forecast",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0C1228"
+      },
+      "permissions": ["ACCESS_FINE_LOCATION"],
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCgkNzryZoYAvTb2580KSdsNnIPd94F2mQ"
+        }
+      },
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "react-native-auth0",
+        {
+          "domain": "dev-ly5rh5e1v78qpuuy.us.auth0.com"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c0f8ff88-c7cc-4f0e-acbe-da0ec8793eb3"
+      }
+    }
+  }
+}
